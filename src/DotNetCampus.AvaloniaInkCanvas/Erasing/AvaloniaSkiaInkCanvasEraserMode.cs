@@ -249,7 +249,7 @@ public class AvaloniaSkiaInkCanvasEraserMode
 
         public void Render(ImmediateDrawingContext context)
         {
-            var skiaSharpApiLeaseFeature = context.TryGetFeature<ISkiaSharpApiLeaseFeature>();
+            var skiaSharpApiLeaseFeature = context.TryGetFeature(typeof(ISkiaSharpApiLeaseFeature)) as ISkiaSharpApiLeaseFeature;
             if (skiaSharpApiLeaseFeature == null)
             {
                 return;
