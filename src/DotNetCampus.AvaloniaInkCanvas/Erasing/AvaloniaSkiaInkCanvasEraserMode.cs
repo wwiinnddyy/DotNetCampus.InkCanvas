@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Input;
 using Avalonia.Media;
@@ -249,7 +250,7 @@ public class AvaloniaSkiaInkCanvasEraserMode
 
         public void Render(ImmediateDrawingContext context)
         {
-            var skiaSharpApiLeaseFeature = context.TryGetFeature(typeof(ISkiaSharpApiLeaseFeature)) as ISkiaSharpApiLeaseFeature;
+            var skiaSharpApiLeaseFeature = context.TryGetFeature<ISkiaSharpApiLeaseFeature>();
             if (skiaSharpApiLeaseFeature == null)
             {
                 return;

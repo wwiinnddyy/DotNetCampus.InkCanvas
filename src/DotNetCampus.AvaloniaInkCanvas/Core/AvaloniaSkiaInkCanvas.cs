@@ -486,7 +486,7 @@ public class AvaloniaSkiaInkCanvas : Control
 
         public void Render(ImmediateDrawingContext context)
         {
-            var skiaSharpApiLeaseFeature = context.TryGetFeature(typeof(ISkiaSharpApiLeaseFeature)) as ISkiaSharpApiLeaseFeature;
+            var skiaSharpApiLeaseFeature = context.TryGetFeature<ISkiaSharpApiLeaseFeature>();
             if (skiaSharpApiLeaseFeature == null)
             {
                 return;
